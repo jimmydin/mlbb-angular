@@ -1,1 +1,38 @@
-<p>hero works!</p>
+<main class="apresentacao">
+  <section class="apresentacao__conteudo">
+      <h1 class="apresentacao__conteudo__titulo">{{heroiSelecionado.nome}}</h1>
+      <p class="falcon__texto">{{heroiSelecionado.texto}}</p>
+  </section>
+  <div class="card__container">
+      <img class="legendary" width="380" [src]="heroiSelecionado.img" alt="Skin da Lesley Legendary">
+  </div>
+</main>
+
+<h1 class="apresentacao__conteudo__titulo parente_titulo" >Parentes :</h1>
+
+<div class="parentes">
+  <div class="parente">
+      <img class="parente_image" src="./assets/harley.jpg" alt="Harley">
+      <h2 class="parente_nome" (click)="selecionarHeroi(3)">
+          <span class="parente_nome_link" >Harley</span>
+      </h2>
+  </div>
+  <div class="parente">
+      <img class="parente_image" src="./assets/gusion.jpg" alt="Gusion">
+      <h2 class="parente_nome" (click)="selecionarHeroi(4)">
+          <span class="parente_nome_link">Gusion</span>
+      </h2>
+  </div>
+  <div class="parente">
+      <img class="parente_image" src="./assets/aamon.jpg" alt="Aamon">
+      <h2 class="parente_nome" (click)="selecionarHeroi(1)">
+          <span class="parente_nome_link">Aamon</span>
+      </h2>
+  </div>
+  <div class="parente">
+      <img class="parente_image" src="./assets/fredrinn.jpg"alt="Fredrinn">
+      <h2 class="parente_nome" (click)="selecionarHeroi(5)">
+          <span class="parente_nome_link">Fredrinn</span>
+      </h2>
+  </div>
+</div>

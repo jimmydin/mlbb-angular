@@ -11,28 +11,10 @@
 <h1 class="apresentacao__conteudo__titulo parente_titulo" >Parentes :</h1>
 
 <div class="parentes">
-  <div class="parente">
-      <img class="parente_image" src="./assets/harley.jpg" alt="Harley">
-      <h2 class="parente_nome" (click)="selecionarHeroi(3)">
-          <span class="parente_nome_link" >Harley</span>
-      </h2>
-  </div>
-  <div class="parente">
-      <img class="parente_image" src="./assets/gusion.jpg" alt="Gusion">
-      <h2 class="parente_nome" (click)="selecionarHeroi(4)">
-          <span class="parente_nome_link">Gusion</span>
-      </h2>
-  </div>
-  <div class="parente">
-      <img class="parente_image" src="./assets/aamon.jpg" alt="Aamon">
-      <h2 class="parente_nome" (click)="selecionarHeroi(1)">
-          <span class="parente_nome_link">Aamon</span>
-      </h2>
-  </div>
-  <div class="parente">
-      <img class="parente_image" src="./assets/fredrinn.jpg"alt="Fredrinn">
-      <h2 class="parente_nome" (click)="selecionarHeroi(5)">
-          <span class="parente_nome_link">Fredrinn</span>
-      </h2>
+  <div class="parente" *ngFor="let parente of parentesHeroiSelecionado">
+    <img class="parente_image" [src]="parente.img">
+    <h2 class="parente_nome" (click)="selecionarHeroi(parente.id)">
+      <span class="parente_nome_link">{{parente.nome}}</span>
+    </h2>
   </div>
 </div>
